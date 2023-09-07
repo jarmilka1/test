@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tabulka.css">
+    <style>
+        * {
+            background-color: rgb(0, 185, 170);
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 400px;
+            font-family: Arial, sans-serif;
+            
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #006572;
+        }
+
+        /* td:hover,
+        th:hover{
+            background-color: white;
+        } */
+        button {
+            background-color: #444141;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: none;
+        }
+
+        button:hover {
+            background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+            animation: slidernbw 5s linear infinite;
+            color: #000;
+        }
+
+        @keyframes slidernbw {
+            to {
+                background-position: 20vw;
+            }
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <th>
+            Jméno
+        </th>
+        <th>
+            Příjmení
+        </th>
+        <% for(var i=0; i < results.length; i++) { %>
+            <tr>
+                <td>
+                    <%= results[i].user_name %>
+                </td>
+                <td>
+                    <%= results[i].user_pass %>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+    <a href="/nav"><button>Domů</button></a>
+</body>
+
+</html>
